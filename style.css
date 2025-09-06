@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Fredoka', sans-serif;
   color: white;
   overflow: hidden;
   text-align: center;
@@ -66,14 +68,31 @@ h2 {
   border-radius: 16px;
   width: 250px;
   height: 60px;
-  font-size: 1.1rem;
-  color: white;
+  font-size: 1.3rem; /* bigger text */
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-
-  background: url("settings/button-bg.png") no-repeat center center;
   background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+/* Button backgrounds */
+.btn.discord {
+  background-image: url("settings/discord.png");
+}
+
+.btn.youtube {
+  background-image: url("settings/youtube.png");
+}
+
+.btn.tiktok {
+  background-image: url("settings/tiktok.png");
+}
+
+.btn.blog {
+  background-image: url("settings/blog.png");
+  color: black; /* adjust if image is light */
 }
 
 .btn img {

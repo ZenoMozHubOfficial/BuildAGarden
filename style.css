@@ -57,8 +57,11 @@ h2 {
   width: 250px;
 }
 
-/* Base button style */
 .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
   border: none;
   border-radius: 16px;
   width: 250px;
@@ -67,29 +70,17 @@ h2 {
   color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  background-size: cover;
-  background-position: center;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+
+  background: url("settings/button-bg.png") no-repeat center center;
+  background-size: cover;
 }
 
-/* Specific buttons with their own images */
-.btn.discord {
-  background-image: url("settings/discord.png");
+.btn img {
+  width: 20px;
+  height: 20px;
 }
 
-.btn.youtube {
-  background-image: url("settings/youtube.png");
-}
-
-.btn.tiktok {
-  background-image: url("settings/tiktok.png");
-}
-
-.btn.blog {
-  background-image: url("settings/blog.png");
-}
-
-/* Hover effect for all buttons */
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #FFD700, 0 0 25px #A020F0;

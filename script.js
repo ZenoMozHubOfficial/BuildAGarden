@@ -58,4 +58,7 @@ document.querySelectorAll(".btn").forEach(btn => {
     clickSound.currentTime = 0;
     clickSound.play();
   });
+
+  // Disable right-click / hold menu
+  btn.addEventListener("contextmenu", e => e.preventDefault());
 });

@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none; /* disable text selection */
-  -webkit-tap-highlight-color: transparent; /* remove mobile highlight */
+  user-select: none; 
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -15,9 +15,10 @@ body {
   text-align: center;
 }
 
-a, a:visited, a:hover, a:active {
-  color: inherit; /* remove blue highlight on links */
-  text-decoration: none;
+a, a:visited, a:hover, a:active, a:focus {
+  color: inherit;           
+  text-decoration: none;    
+  outline: none;            
 }
 
 #starfield {
@@ -73,7 +74,7 @@ h2 {
   border-radius: 16px;
   width: 250px;
   height: 60px;
-  font-size: 1.3rem; /* bigger text */
+  font-size: 1.3rem; 
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -84,28 +85,22 @@ h2 {
 }
 
 .btn img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 0 15px #FFD700, 0 0 25px #A020F0;
 }
-/* Remove underline and color changes for links/buttons */
-a, a:visited, a:hover, a:active, a:focus {
-  color: inherit;           /* text stays the same color */
-  text-decoration: none;    /* remove underline */
-  outline: none;            /* remove focus outline */
-}
 
 /* Remove button focus / active outline */
 .btn:focus, .btn:active {
   outline: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* keep shadow same */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Disable mobile tap highlight (blue flash on touch) */
+/* Disable mobile tap highlight */
 .btn, a {
   -webkit-tap-highlight-color: transparent;
 }

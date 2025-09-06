@@ -68,33 +68,15 @@ h2 {
   border-radius: 16px;
   width: 250px;
   height: 60px;
-  font-size: 1.3rem;
+  font-size: 1.3rem; /* bigger text */
+  color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-position: center;
+  /* Keep the single background image like your working file */
+  background: url("settings/button-bg.png") no-repeat center center;
   background-size: cover;
-  color: white;
-}
-
-.btn.discord {
-  background-image: url("settings/discord.png");
-}
-
-.btn.youtube {
-  background-image: url("settings/youtube.png");
-}
-
-.btn.tiktok {
-  background-image: url("settings/tiktok.png");
-}
-
-.btn.blog {
-  background-image: url("settings/blog.png");
-  color: black;
 }
 
 .btn img {

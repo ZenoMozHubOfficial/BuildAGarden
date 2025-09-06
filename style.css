@@ -4,8 +4,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
+  user-select: none; /* disable text selection */
+  -webkit-tap-highlight-color: transparent; /* remove mobile highlight */
 }
 
 body {
@@ -13,6 +13,11 @@ body {
   color: white;
   overflow: hidden;
   text-align: center;
+}
+
+a, a:visited, a:hover, a:active {
+  color: inherit; /* remove blue highlight on links */
+  text-decoration: none;
 }
 
 #starfield {
@@ -69,14 +74,13 @@ h2 {
   width: 250px;
   height: 60px;
   font-size: 1.3rem; /* bigger text */
-  color: white;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 
-  /* Keep the single background image like your working file */
   background: url("settings/button-bg.png") no-repeat center center;
   background-size: cover;
+  color: white;
 }
 
 .btn img {

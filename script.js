@@ -1,6 +1,16 @@
 const canvas = document.getElementById("starfield");
 const ctx = canvas.getContext("2d");
 
+// Background music
+const bgMusic = new Audio("settings/music.mp3");
+bgMusic.loop = true;
+bgMusic.volume = 0.3;
+
+// Play music on first user interaction
+document.addEventListener("click", () => {
+    bgMusic.play();
+}, { once: true });
+
 // Particle setup
 let stars = [];
 let numStars = 150 * 3; // 3x more particles
@@ -40,15 +50,12 @@ function drawStars() {
 }
 drawStars();
 
-// Button click sound + teleport
-function playClick(url) {
-  const audio = new Audio("settings/click.mp3");
-  audio.play();
-  if (url) window.open(url, "_blank"); // teleport to link
-}
+// Click sound for all buttons
+const clickSound = new Audio("settings/click.mp3");
 
-// Assign buttons to links
-document.querySelector(".btn.discord").addEventListener("click", () => playClick("https://discord.gg/YOUR_LINK"));
-document.querySelector(".btn.youtube").addEventListener("click", () => playClick("https://www.youtube.com/"));
-document.querySelector(".btn.tiktok").addEventListener("click", () => playClick("https://www.tiktok.com/"));
-document.querySelector(".btn.blog").addEventListener("click", () => playClick("https://YOUR_BLOG_LINK"));
+document.querySelectorAll(".btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    clickSound.currentTime = 0;
+    clickSound.play();
+  });
+});

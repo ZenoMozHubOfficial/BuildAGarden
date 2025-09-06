@@ -68,16 +68,18 @@ h2 {
   border-radius: 16px;
   width: 250px;
   height: 60px;
-  font-size: 1.3rem; /* bigger text */
+  font-size: 1.3rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  background-size: cover;
+
+  background-color: transparent;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
   color: white;
 }
 
-/* Button backgrounds */
 .btn.discord {
   background-image: url("settings/discord.png");
 }
@@ -92,7 +94,7 @@ h2 {
 
 .btn.blog {
   background-image: url("settings/blog.png");
-  color: black; /* adjust if image is light */
+  color: black;
 }
 
 .btn img {
